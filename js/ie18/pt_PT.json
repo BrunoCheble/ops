@@ -1,0 +1,43 @@
+{
+  "link_about_us": "Sobre nós",
+  "link_services": "Serviços",
+  "link_team": "Equipa",
+  "link_opportunities": "Oportunidades",
+  "link_contact": "Contacto",
+
+  "title_about_us": "Sobre nós",
+  "title_mission": "Missão",
+  "title_vision": "Visão",
+  "title_values": "Valores",
+
+  "title_our_services": "Nossos serviços",
+  "subtitle_our_services": "O que fazemos?",
+
+  "text_about_us": "Somos uma empresa portuguesa a operar na área de tecnologias de informação com experiência neste setor de atividade.",
+  "text_mission": "Criar valor em qualquer operação de uma forma rápida e sustentável, tornando, cada vez mais, as pessoas felizes.",
+  "text_vision": "Ser uma referência no mercado de consultoria em Portugal, com base numa gestão próxima das pessoas.",
+  "text_values": "Transparência, Lealdade, Fidelidade, Ética, Competência e Profissionalismo.",
+
+  "subtitle_sourcing_consulting": "Ajudamos as equipas e os negócios a crescer",
+  "subtitle_nearshore": "Dispomos de processos ágeis e pessoas experientes para que os nossos clientes internacionais possam ter equipas no nosso escritório capazes de responder às suas necessidades.",
+  "subtitle_quickops_projects": "Transformamos ideias em projetos sustentáveis",
+
+  "text_sourcing_consulting": "Conseguimos ajudar os nossos clientes a tornarem as suas equipas maiores e melhores, de uma forma rápida, sustentável e com menor risco. <br />Para isso, dispomos de consultores altamente qualificados e motivados para cada necessidade.",
+
+  "subtitle_main_advantages": "Principais vantagens",
+  "text_nearshore_1": "Competitividade a nível de custos",
+  "text_nearshore_2": "Profissionais com elevado nível técnico que permitem uma melhor gestão de tempo quer no planeamento quer na execução",
+  "text_nearshore_3": "Acompanhamento contínuo das suas equipas remotamente",
+  "text_nearshore_4": "Localização privilegiada",
+
+  "text_quickops_projects": "O nosso propósito é desenvolver projetos à medida de cada cliente. <br>Apresentamos uma solução de acordo com as especificidades do cliente, que estará envolvido em todas as fases de desenvolvimento do projeto. <br>É a solução ideal para quem deseja criar ou melhorar uma aplicação com custos controlados e previamente estimados",
+
+  "text_about_us_footer": "Uma empresa portuguesa a operar na área de tecnologias de informação com experiência neste setor de atividade.",
+
+  "title_our_opportunities": "Nossas oportunidades",
+  "title_project": "Projetos",
+
+  "my_opportunity": "Minha oportunidade",
+
+  "send_message": "Enviar uma mensagem"
+}

@@ -1,0 +1,43 @@
+{
+  "link_about_us": "About us",
+  "link_services": "Services",
+  "link_team": "Team",
+  "link_opportunities": "Carrers",
+  "link_contact": "Contact",
+
+  "title_about_us": "About us",
+  "title_mission": "Mission",
+  "title_vision": "Vision",
+  "title_values": "Values",
+
+  "title_our_services": "OUR SERVICES",
+  "subtitle_our_services": "What We Do?",
+
+  "text_about_us": "We are a Portuguese company operating in the IT area with experience in this activity sector.",
+  "text_mission": "Create value in any operation, with a quick and sustainable way of work. Our goal is to make people increasingly happy.",
+  "text_vision": "Become a reference in the Portuguese consulting market, based in a close relationship with the community.",
+  "text_values": "Transparency, Loyalty, Professional ethics, Competence and Professionalism.",
+
+  "subtitle_sourcing_consulting": "We help teams and businesses grow",
+  "subtitle_nearshore": "We work with agile processes and experienced people, so that our international clients can have a project team in our office that is capable of serving their needs.",
+  "subtitle_quickops_projects": "We transform ideas into sustainable projects",
+
+  "text_sourcing_consulting": "We help grow our clients' teams in a quick and sustainable way with a lower risk. <br> To achieve this, we have high qualified and motivated consultants to serve every client's needs.",
+
+  "subtitle_main_advantages": "Main Advantages",
+  "text_nearshore_1": "Costs competitivity",
+  "text_nearshore_2": "Consultants with a high technical level which allow for a better time management, both in the planning and in the execution",
+  "text_nearshore_3": "Remotely continuous monitoring of the project team",
+  "text_nearshore_4": "Privileged location",
+
+  "text_quickops_projects": "Our purpose is to create customized projects that fit the needs of each client. <br> We can deliver a solution according to the client's specificities, who will be involved in all the phases of the project development. <br>This is the perfect solution for the clients who want to create or improve an application with controlled and previously estimated costs.",
+
+  "text_about_us_footer": "A Portuguese company operating in the IT area with experience in this activity sector.",
+
+  "title_our_opportunities": "Our opportunities",
+  "title_project": "Projects",
+
+  "my_opportunity": "My opportunity",
+
+  "send_message": "Send a message"
+}
