@@ -26,8 +26,9 @@ $('.myOpportunities').click(function() {
 
 $('.card-title').click(function(e) {
   $('.collapse.show').removeClass('show');
-  $('#images-service *').hide();
-  $('#'+$(this).data('image')).show();
+  
+  $('#our-services').css('background-image','url('+$(this).data('image')+')')
+  //$('#'+$(this).data('image')).show();
   //alert( $(this).data('image'));
 })
 

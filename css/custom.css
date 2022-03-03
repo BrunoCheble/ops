@@ -427,13 +427,13 @@
     min-height: 500px
   }
 }
-
+/*
 #footer {
   background: url('../img/porto.jpg');
   background-repeat: no-repeat;
   background-position: top center;
   background-color: rgb(238, 240, 244) !important;
-}
+}*/
 
 
 
@@ -477,3 +477,35 @@
 	transform: translatey(0px);
 	animation: avatar 6s ease-in-out infinite;
 }
+
+#our-services {
+  transition: background-image 1s ease;
+}
+
+.counter {
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(175, 175, 175, 0.66); 
+  box-shadow: 0px 0px 7px 0px rgba(175, 175, 175, 0.66);
+  border-bottom: 4px solid rgba(175, 175, 175, 0.66);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  transition: all .5s ease-in-out;
+}
+.counter strong {
+  flex: 1;
+}
+.counter label {
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #666!important;
+}
+
+.counter:hover {
+  box-shadow: 0px 0px 7px 0px rgba(27, 118, 255, 0.66);
+  border-bottom: 4px solid rgba(27, 118, 255, 0.66);
+}
+
