@@ -506,8 +506,8 @@
 }
 
 .counter:hover {
-  box-shadow: 0px 0px 7px 0px rgba(27, 118, 255, 0.66);
-  border-bottom: 1px solid rgba(27, 118, 255, 0.66);
+  box-shadow: 0px 0px 7px 0px #121c4d;
+  border-bottom: 1px solid #121c4d;
 }
 
 
@@ -528,3 +528,5 @@
 #techs img:hover {
   filter: none
 }
+
+#revolutionSlider .tparrows {display: none}
