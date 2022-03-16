@@ -1,8 +1,8 @@
 <?php
 
-require './php-mailer/src/PHPMailer.php';
-require './php-mailer/src/SMTP.php';
-require './php-mailer/src/Exception.php';
+require_once('./php-mailer/src/PHPMailer.php');
+require_once('./php-mailer/src/SMTP.php');
+require_once('./php-mailer/src/Exception.php');
 
 class Form {
   public static function validate($body) {
