@@ -1,8 +1,8 @@
 <?php
 
-require_once('./php-mailer/src/PHPMailer.php');
-require_once('./php-mailer/src/SMTP.php');
-require_once('./php-mailer/src/Exception.php');
+require_once('./php/php-mailer/src/PHPMailer.php');
+require_once('./php/php-mailer/src/SMTP.php');
+require_once('./php/php-mailer/src/Exception.php');
 
 		$mail = new PHPMailer();
 /*
