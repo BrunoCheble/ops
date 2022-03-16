@@ -63,7 +63,7 @@
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	
 	-->
-	<script src="https://www.google.com/recaptcha/api.js?render=6LfZp-EeAAAAABpzw3f4kULJ5Jq1JzxFpvUM0kE-"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL"></script>
 
 
 </head>
@@ -222,7 +222,7 @@
 								<button 
 									type="submit" 
 									class="btn btn-primary g-recaptcha"
-									data-sitekey="6LfZp-EeAAAAABpzw3f4kULJ5Jq1JzxFpvUM0kE-" 
+									data-sitekey="6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL" 
 									data-callback='onSubmit'>Enviar</button>
 							</div>
 							
@@ -841,9 +841,10 @@ data-x="6LfZp-EeAAAAAHZDhHZfyO3wg0FECY9aERwYoPDc"
 
 <script>
 		grecaptcha.ready(function() {
-			grecaptcha.execute('6LfZp-EeAAAAABpzw3f4kULJ5Jq1JzxFpvUM0kE-', {action: 'submit'}).then(function(token) {
+			grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
 					var response = document.getElementById('token_generate')
 					response.value = token
+					console.log(token)
 			});
 		});
 </script>
