@@ -102,8 +102,8 @@ try {
   
   Email::send($_POST['subject'], Email::getBody($_POST), $attachment);    
 
-  echo json_encode(['success' => 'Formulário enviado com sucesso!']);
+  echo json_encode(['status' => 'success', 'msg' => 'Formulário enviado com sucesso!']);
 }
 catch (Exception $e) {
-  echo json_encode(['error' => $e->getMessage()]);
+  echo json_encode(['status' => 'error', 'msg' => $e->getMessage()]);
 }

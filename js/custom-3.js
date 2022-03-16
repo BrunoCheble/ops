@@ -44,7 +44,16 @@ $('form#vacancy-form').submit(function(e) {
       type: 'POST',
       data: formData,
       success: function (data) {
-        console.log(data);
+        if(data['status'] === 'error') {
+          $('#response-form').addClass('alert-danger');
+        }
+        else {
+          $('#response-form').addClass('alert-success');
+          setTimeout(function() { location.reload(); }, 3000);
+        }
+
+        $('#response-form').text(data['msg']);
+        $('#response-form').show();
       },
       cache: false,
       contentType: false,
