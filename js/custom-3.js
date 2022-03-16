@@ -37,6 +37,15 @@ $('.apply-vacancy').on('click', function(e) {
 
 $('form#vacancy-form').submit(function(e) {
   e.preventDefault();
+  
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
+        var response = document.getElementById('token_generate')
+        response.value = token
+        console.log(token)
+    });
+  });
+
   var formData = new FormData(this);    
 
   $.ajax({
@@ -50,7 +59,7 @@ $('form#vacancy-form').submit(function(e) {
         }
         else {
           $('#response-form').addClass('alert-success');
-          setTimeout(function() { location.reload(); }, 3000);
+          setTimeout(function() { location.reload(); }, 5000);
         }
 
         $('#response-form').text(data['msg']);
