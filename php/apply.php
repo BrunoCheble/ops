@@ -32,7 +32,7 @@ class Recaptcha {
 
   public static function validate($token) {
 
-    $secret = get_env('TOKEN_RECAPTCHA');
+    $secret = getenv('TOKEN_RECAPTCHA');
     $request = file_get_contents(self::$url.'?secret='.$secret.'&response='.$token);
     $result = json_decode($request);
 	
