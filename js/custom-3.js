@@ -28,24 +28,29 @@ $('.nav-link').click(function(e) {
   //$('#header.side-header-hide').removeClass('side-header-hide')
 })
 
-$('.apply-vacancy').on('click', function(e) {
-  e.preventDefault()
-  const subject = $(this).parents('.vacancy-item').find('[data="subject"]').text()
-  $('#subject').val(subject)
-  $('#formModal').modal('show')
-
+function reloadReCaptcha() {
   grecaptcha.ready(function() {
     grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
         var response = document.getElementById('token_generate')
         response.value = token
-        console.log(token)
     });
   });
+}
+
+$('.apply-vacancy').on('click', function(e) {
+  e.preventDefault()
+  const subject = $(this).parents('.vacancy-item').find('[data="subject"]').text()
+  $('#subject').val(subject)
+  $('form#vacancy-form [type="submit"]').attr('disabled',false)
+  $('#formModal').modal('show')
+  reloadReCaptcha();
 })
 
 $('form#vacancy-form').submit(function(e) {
   e.preventDefault();
   
+  $('form#vacancy-form [type="submit"]').attr('disabled',true);
+
   var formData = new FormData(this);    
 
   $.ajax({
@@ -54,12 +59,15 @@ $('form#vacancy-form').submit(function(e) {
       dataType: "json",
       data: formData,
       success: function (data) {
+  
         if(data['status'] === 'error') {
+          reloadReCaptcha();
           $('#response-form').addClass('alert-danger');
+          $('form#vacancy-form [type="submit"]').attr('disabled',false)
         }
         else {
           $('#response-form').addClass('alert-success');
-          setTimeout(function() { location.reload(); }, 5000);
+          setTimeout(function() { $('#formModal').modal('hide') }, 3000);
         }
 
         $('#response-form').text(data['msg']);
