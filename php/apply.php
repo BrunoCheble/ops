@@ -20,7 +20,7 @@ class Form {
 
 class Attachment {
   public static function validate($file) {
-    if ($file["size"] > 500000) {
+    if ($file["size"] > 5000000) {
       throw new Exception("O tamanho máximo do PDF é de 5mb");
     }
   }
@@ -36,9 +36,11 @@ class Recaptcha {
     $request = file_get_contents(self::$url.'?secret='.$secret.'&response='.$token);
     $result = json_decode($request);
 	
-	  if(!$result->success) {
-      throw new Exception("Requisição inválida, favor entrar em contato por e-mail");
+	  if($result->success) {
+      return;
     }
+    
+    throw new Exception("Requisição inválida, favor entrar em contato por e-mail");
   }
 }
 
@@ -48,8 +50,8 @@ class Email {
     $return = [
       '<b>Name:</b> '.$body['name'],
       '<b>E-mail:</b> '.$body['email'],
-      '<b>URL:</b> '.isset($body['url']) ? $body['url'] : 'N/D',
-      '<b>Comment:</b> '.isset($body['obs']) ? $body['obs'] : 'N/D'
+      '<b>URL:</b> '.(isset($body['url']) ? $body['url'] : 'N/D'),
+      '<b>Comment:</b> '.(isset($body['obs']) ? $body['obs'] : 'N/D')
     ];
 
     return implode('<br/>',$return);
@@ -77,7 +79,7 @@ class Email {
     $mail->Subject = $subject;
     $mail->Body    = $body;
     
-    if(isset($attachment)) {
+    if($attachment) {
       $mail->AddAttachment($attachment['tmp_name'], $attachment['name']);
     }
 
