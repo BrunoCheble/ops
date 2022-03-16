@@ -29,11 +29,11 @@ class Attachment {
 class Recaptcha {
 
   public static $url = 'https://www.google.com/recaptcha/api/siteverify';
-  public static $secret = get_env('TOKEN_RECAPTCHA');
 
   public static function validate($token) {
-
-    $request = file_get_contents(self::$url.'?secret='.self::$secret.'&response='.$token);
+    
+    $secret = get_env('TOKEN_RECAPTCHA');
+    $request = file_get_contents(self::$url.'?secret='.$secret.'&response='.$token);
     $result = json_decode($request);
 	
 	  if(!$result->success) {
