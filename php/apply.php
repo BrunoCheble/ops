@@ -4,6 +4,8 @@ require_once('./php-mailer/src/PHPMailer.php');
 require_once('./php-mailer/src/SMTP.php');
 require_once('./php-mailer/src/Exception.php');
 
+		$mail = new PHPMailer(true);
+/*
 class Form {
   public static function validate($body) {
     $requireFields = ['name','email','url','subject'];
@@ -64,17 +66,14 @@ class Email {
     $mail->Send();
   }
 }
-
 try {
-  Email::send('','');
-  /*
 	Form::validate($_POST);
 	Recaptcha::validate($_POST['token']);
   Attachment::validate($_FILES);
   Email::send($_POST,$_FILES);
-  */
   echo json_encode(['success' => 'Formulário enviado com sucesso!']);
 }
 catch (Exception $e) {
   echo json_encode(['error' => $e->getMessage()]);
 }
+*/
