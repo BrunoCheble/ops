@@ -67,9 +67,8 @@ class Email {
     $mail->Send();
   }
 }
-
 try {
-  Email::send('','');
+  Email::send('','')
   /*
 	Form::validate($_POST);
 	Recaptcha::validate($_POST['token']);
@@ -81,3 +80,4 @@ try {
 catch (Exception $e) {
   echo json_encode(['error' => $e->getMessage()]);
 }
+*/
