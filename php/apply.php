@@ -7,6 +7,25 @@ require 'php-mailer/src/PHPMailer.php';
 require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
 
+echo json_encode([  
+  'SMTP_HOST' => getenv('SMTP_HOST'),
+  'SMTP_USER' => getenv('SMTP_USER'),
+  'SMTP_PASS' => getenv('SMTP_PASS'),
+  'SMTP_FROM_EMAIL' => getenv('SMTP_FROM_EMAIL'),
+  'SMTP_FROM_NAME' => getenv('SMTP_FROM_NAME'),
+]);
+die;
+/*
+$mail->Host = getenv('SMTP_HOST');
+    $mail->SMTPAuth = true;
+    $mail->Username = getenv('SMTP_USER');
+    $mail->Password = getenv('SMTP_PASS');
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    $mail->SetFrom(getenv('SMTP_FROM_EMAIL'), getenv('SMTP_FROM_NAME'));
+    $mail->AddAddress(getenv('SMTP_USER'));
+*/
 class Form {
   public static function validate($body) {
     $requireFields = ['name','email','url','subject'];
