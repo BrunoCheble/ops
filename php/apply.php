@@ -68,7 +68,7 @@ class Email {
   }
 }
 try {
-  Email::send('','')
+  Email::send('','');
   /*
 	Form::validate($_POST);
 	Recaptcha::validate($_POST['token']);
