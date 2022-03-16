@@ -76,21 +76,30 @@ class Email {
 
     $mail->Subject = $subject;
     $mail->Body    = $body;
+    
+    if(isset($attachment)) {
+      $mail->AddAttachment($attachment['tmp_name'], $attachment['name']);
+    }
 
     $mail->Send();
   }
 }
 try {
+
   if(isset($_GET['test'])) {
-    Email::send('Test','Hello World',1);
-  }
-  else {
-    Form::validate($_POST);
-    Recaptcha::validate($_POST['token']);
-    Attachment::validate($_FILES);
-    Email::send($_POST['subject'], Email::getBody($_POST), $_FILES);    
+    Email::send('Test','Hello World',null,1);
+    die;
   }
   
+  Form::validate($_POST);
+  Recaptcha::validate($_POST['token']);
+
+  $attachment = isset($_FILES['curriculum']) ? $_FILES['curriculum'] : null;
+
+  if ($attachment) Attachment::validate($attachment);
+  
+  Email::send($_POST['subject'], Email::getBody($_POST), $attachment);    
+
   echo json_encode(['success' => 'Formulário enviado com sucesso!']);
 }
 catch (Exception $e) {

@@ -35,28 +35,3 @@ $('.card-title').click(function(e) {
 $('#click-info-company').click(function() {
   $('#infoCompany').modal('show')
 })
-
-
-$('#who-we-are').click(function(e) {
-  e.preventDefault()
-  $('#whoweare').show()
-  return true
-})
-
-$('.toogle-vacancy').click(function(){
-  const content = $(this).parents('.vacancy-item').find('.vacancy-content')
-  const deg = !content.is(':visible') ? 180 : 0
-  const color = !content.is(':visible') ? '#121c4d' : '#666'
-
-  content.slideToggle()
-
-  $(this).find('.icon-toogle').animate(
-    { deg },
-    {
-      duration: 600,
-      step: function(now) {
-        $(this).css({ transform: 'rotate(' + now + 'deg)', color });
-      }
-    }
-  )
-})

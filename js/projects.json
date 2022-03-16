@@ -1,0 +1,56 @@
+[
+  {
+    "title": "JAVA DEVELOPER",
+    "location": "PORTO / LISBOA",
+    "type": "FULL-TIME",
+    "skills": [
+      "Degree in the IT area",
+      "Professional experience in .NET, C#, ASP.NET programming",
+      "JavaScript knowledge are valued",
+      "Experience in Web Technologies (JSON, REST, AJAX, HTTP)",
+      "Experience with design patterns and unit tests",
+      "Good English level"
+    ]
+  },
+  {
+    "title": ".NET DEVELOPER",
+    "location": "PORTO / LISBOA",
+    "type": "FULL-TIME",
+    "skills": [
+      "Degree in the IT area",
+      "Professional experience in .NET, C#, ASP.NET programming",
+      "JavaScript knowledge are valued",
+      "Experience in Web Technologies (JSON, REST, AJAX, HTTP)",
+      "Experience with design patterns and unit tests",
+      "Good English level"
+    ]
+  },
+  {
+    "title": "Front-End Developer",
+    "location": "PORTO / LISBOA",
+    "type": "FULL-TIME",
+    "skills": [
+      "Degree in the IT area",
+      "Solid knowledge in JavaScript, HTML5, CSS3, jQuery",
+      "Experience with frameworks (Angular or React)",
+      "Experience with agile methodologies",
+      "Good English level"
+    ]
+  },
+  {
+    "title": "QAE",
+    "location": "PORTO / LISBOA",
+    "type": "FULL-TIME",
+    "skills": [
+      "Degree in the IT area",
+      "Ability to Identify and design of test cases and scripts",
+      "Programming knowledge",
+      "Knowledge in test automation tools, such as Selenium, Expresso and Cucumber",
+      "Experience in version control systems",
+      "CI/CD",
+      "Good English level"
+    ]
+  }
+]
+
+

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Artur Moura",
+    "position": "Managing Partner",
+    "thumb": "./img/team/Artur Moura.jpg"
+  },
+  {
+    "name": "João Vale",
+    "position": "Managing Partner",
+    "thumb": "./img/team/João Vale.jpg"
+  },
+  {
+    "name": "Nuno Rodrigues",
+    "position": "Business Manager",
+    "thumb": "./img/team/Nuno Rodrigues.jpg"
+  },
+  {
+    "name": "Débora Pinto",
+    "position": "Business Manager",
+    "thumb": "./img/team/Débora Pinto.jpg"
+  },
+  {
+    "name": "João Ribeiro",
+    "position": "Business Manager",
+    "thumb": "./img/team/João Ribeiro.jpg"
+  },
+  {
+    "name": "Cláudia Abreu",
+    "position": "IT Recruiter",
+    "thumb": "./img/team/Cláudia Abreu.jpg"
+  },
+  {
+    "name": "Ana Baptista",
+    "position": "IT Recruiter",
+    "thumb": "./img/team/Ana Baptista.jpg"
+  },
+  {
+    "name": "Marco Alves",
+    "position": "IT Recruiter",
+    "thumb": "./img/team/Marco Alves.jpg"
+  },
+  {
+    "name": "Rita Muñoz",
+    "position": "IT Recruiter",
+    "thumb": "./img/team/Rita Munoz.jpg"
+  },
+  {
+    "name": "Diogo Gonçalves",
+    "position": "IT Recruiter",
+    "thumb": "./img/team/Diogo Gonçalves.jpg"
+  }
+]
