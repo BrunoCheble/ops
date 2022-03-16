@@ -4,7 +4,7 @@ require_once('./php-mailer/src/PHPMailer.php');
 require_once('./php-mailer/src/SMTP.php');
 require_once('./php-mailer/src/Exception.php');
 
-		$mail = new PHPMailer(true);
+		$mail = new PHPMailer();
 /*
 class Form {
   public static function validate($body) {
