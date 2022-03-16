@@ -42,6 +42,7 @@ $('.apply-vacancy').on('click', function(e) {
   const subject = $(this).parents('.vacancy-item').find('[data="subject"]').text()
   $('#subject').val(subject)
   $('form#vacancy-form [type="submit"]').attr('disabled',false)
+  $('#response-form').hide()
   $('#formModal').modal('show')
   reloadReCaptcha();
 })
