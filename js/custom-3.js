@@ -42,6 +42,7 @@ $('form#vacancy-form').submit(function(e) {
   $.ajax({
       url: './php/apply.php',
       type: 'POST',
+      dataType: "json",
       data: formData,
       success: function (data) {
         if(data['status'] === 'error') {
