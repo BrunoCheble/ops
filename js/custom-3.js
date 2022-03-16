@@ -29,13 +29,20 @@ $('.nav-link').click(function(e) {
 })
 
 function reloadReCaptcha() {
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
-        var response = document.getElementById('token_generate')
-        response.value = token
-    });
+  grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
+    document.getElementById('token_generate').value = token
   });
 }
+
+$('#look-vacancy').on('click', function(e) {
+  e.preventDefault()
+  $('#subject').val('Encontrar projeto ideal para mim')
+
+  $('form#vacancy-form [type="submit"]').attr('disabled',false)
+  $('#response-form').hide()
+  $('#formModal').modal('show')
+  reloadReCaptcha();
+})
 
 $('.apply-vacancy').on('click', function(e) {
   e.preventDefault()
