@@ -33,11 +33,7 @@ $('.apply-vacancy').on('click', function(e) {
   const subject = $(this).parents('.vacancy-item').find('[data="subject"]').text()
   $('#subject').val(subject)
   $('#formModal').modal('show')
-})
 
-$('form#vacancy-form').submit(function(e) {
-  e.preventDefault();
-  
   grecaptcha.ready(function() {
     grecaptcha.execute('6LfgYOceAAAAAMf6OXVViznq_F3B0Rz9vSzVTRwL', {action: 'submit'}).then(function(token) {
         var response = document.getElementById('token_generate')
@@ -45,7 +41,11 @@ $('form#vacancy-form').submit(function(e) {
         console.log(token)
     });
   });
+})
 
+$('form#vacancy-form').submit(function(e) {
+  e.preventDefault();
+  
   var formData = new FormData(this);    
 
   $.ajax({
