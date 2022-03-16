@@ -165,6 +165,29 @@
 		<div role="main" class="main">
 
 
+			<div class="modal fade" id="nearshoreModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="">Vantagens - NEARSHORE</h4>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+						</div>
+						<div class="modal-body">
+							<ul class="list list-icons list-primary mb-0">
+								<li><i class="fas fa-check"></i> Costs competitivity</li>
+								<li><i class="fas fa-check"></i> Consultants with a high technical level which allow for a better time management, both in the planning and in the execution</li>
+								<li><i class="fas fa-check"></i> Remotely continuous monitoring of the project team</li>
+								<li><i class="fas fa-check"></i> Privileged location</li>
+							</ul>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
 				aria-hidden="true">
 
@@ -508,10 +531,11 @@
 												internacionais dos seus clientes a partir da alocação remota dos seus consultores. Para isso,
 												dispõe de processos ágeis, pessoas capazes e infraestruturas para alocação das equipas de
 												projeto.</p>
-											<a href="#"
+											<button 
+												id="open-nearshore"
 												class="d-inline-flex align-items-center btn btn-light text-color-dark font-weight-bold px-2 btn-py-1 text-1 rounded"><span
 													class="text-2 py-1 ps-2">VER VANTAGENS</span> <i
-													class="fa fa-arrow-right ms-2 me-2 ps-4 text-3"></i></a>
+													class="fa fa-arrow-right ms-2 me-2 ps-4 text-3"></i></button>
 										</span>
 									</span>
 								</span>
@@ -659,7 +683,7 @@
 							</div>
 						</div>
 						<div class="col-auto">
-							<button id="look-vacancy" class="btn btn-light btn-rounded font-weight-bold px-5 py-3 text-3">Candidata-te aqui!</button>	
+							<button id="look-vacancy" class="btn btn-light btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500">Candidata-te aqui!</button>	
 						</div>
 					</div>
 					

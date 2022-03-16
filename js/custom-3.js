@@ -86,3 +86,7 @@ $('form#vacancy-form').submit(function(e) {
       processData: false
   });
 })
+
+$('#open-nearshore').click(function(){
+  $('#nearshoreModal').modal('show')
+})
