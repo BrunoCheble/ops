@@ -29,7 +29,7 @@ class Attachment {
 class Recaptcha {
 
   public static $url = 'https://www.google.com/recaptcha/api/siteverify';
-  public static $secret = '6LfZp-EeAAAAAHZDhHZfyO3wg0FECY9aERwYoPDc';
+  public static $secret = get_env('TOKEN_RECAPTCHA');
 
   public static function validate($token) {
 
@@ -43,10 +43,22 @@ class Recaptcha {
 }
 
 class Email {
-  public static function send($body, $attachment) {
+
+  public static function getBody($body) {
+    $return = [
+      '<b>Name:</b> '.$body['name'],
+      '<b>E-mail:</b> '.$body['email'],
+      '<b>URL:</b> '.isset($body['url']) ? $body['url'] : 'N/D',
+      '<b>Comment:</b> '.isset($body['obs']) ? $body['obs'] : 'N/D'
+    ];
+
+    return implode('<br/>',$return);
+  }
+
+  public static function send($subject, $body, $attachment, $debug = 0) {
     
 		$mail = new PHPMailer(true);
-    $mail->SMTPDebug = 1;
+    $mail->SMTPDebug = $debug;
     
     $mail->IsSMTP();
     $mail->Host = getenv('SMTP_HOST');
@@ -57,26 +69,26 @@ class Email {
     $mail->Port = 587;
 
     $mail->SetFrom(getenv('SMTP_FROM_EMAIL'), getenv('SMTP_FROM_NAME'));
-    $mail->AddAddress(getenv('SMTP_USER'));
-    $mail->IsHTML(true);                                  // Set email format to HTML
+    $mail->AddAddress(getenv('SMTP_TO_EMAIL'));
+    $mail->IsHTML(true);
 
     $mail->CharSet = 'UTF-8';
 
-    $mail->Subject = 'Subject';
-    $mail->Body    = '<h3>hello world</h3>';
+    $mail->Subject = $subject;
+    $mail->Body    = $body;
 
     $mail->Send();
   }
 }
 try {
   if(isset($_GET['test'])) {
-    Email::send('','');
+    Email::send('Test','Hello World',1);
   }
   else {
     Form::validate($_POST);
     Recaptcha::validate($_POST['token']);
     Attachment::validate($_FILES);
-    Email::send($_POST,$_FILES);    
+    Email::send($_POST['subject'], Email::getBody($_POST), $_FILES);    
   }
   
   echo json_encode(['success' => 'Formulário enviado com sucesso!']);
