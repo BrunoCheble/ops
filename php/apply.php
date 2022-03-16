@@ -56,6 +56,7 @@ class Email {
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
+    $mail->SetFrom(getenv('SMTP_FROM_EMAIL'), getenv('SMTP_FROM_NAME'));
     $mail->AddAddress(getenv('SMTP_USER'));
     $mail->IsHTML(true);                                  // Set email format to HTML
 
