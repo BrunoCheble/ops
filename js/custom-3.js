@@ -40,7 +40,7 @@ $('form#vacancy-form').submit(function(e) {
   var formData = new FormData(this);    
 
   $.ajax({
-      url: 'apply.php',
+      url: './php/apply.php',
       type: 'POST',
       data: formData,
       success: function (data) {
