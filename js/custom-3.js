@@ -4,6 +4,15 @@ $('#who-we-are').click(function(e) {
   return true
 })
 
+$(document).ready(function() {
+
+  if(!$('#our-company').is(':visible')) {
+    $('#link-our-company').attr('href','#whoweare');
+    $('#link-our-company').attr('data-hash-offset','50')
+  }
+
+})
+
 $('.toogle-vacancy').click(function(){
   const content = $(this).parents('.vacancy-item').find('.vacancy-content')
   const deg = !content.is(':visible') ? 180 : 0
