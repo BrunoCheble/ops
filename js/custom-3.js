@@ -4,6 +4,12 @@ $('#who-we-are').click(function(e) {
   return true
 })
 
+$('.nav-link').click(function(e) {
+  e.preventDefault()
+  $('.nav-link.active').removeClass('active')
+  $(this).addClass('active')
+})
+
 $(document).ready(function() {
 
   if(!$('#our-company').is(':visible')) {
