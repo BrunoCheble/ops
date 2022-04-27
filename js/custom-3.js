@@ -51,7 +51,7 @@ function reloadReCaptcha() {
 
 $('#look-vacancy').on('click', function(e) {
   e.preventDefault()
-  $('#subject').val('Encontrar projeto ideal para mim')
+  $('#subject').val($('#default-subject').text())
 
   $('form#vacancy-form [type="submit"]').attr('disabled',false)
   $('#response-form').hide()
